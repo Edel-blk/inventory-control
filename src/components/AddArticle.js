@@ -1,6 +1,7 @@
 import React from 'react';
 
-const AddArticle = () => {
+
+export default function AddArticle() {
 
     let [input, setInput] = React.useState({
         name: '', 
@@ -15,7 +16,7 @@ const AddArticle = () => {
 
     let handleSubmit = (e) => {
         e.preventDefault();
-        console.log(input);
+        console.log(this.state.input);
         setInput({ 
             name: '', 
             units: '',
@@ -49,4 +50,3 @@ const AddArticle = () => {
     )
 }
 
-export default AddArticle;
